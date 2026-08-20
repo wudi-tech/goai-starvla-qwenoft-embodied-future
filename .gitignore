@@ -1,0 +1,13 @@
+# Never place model weights, datasets, simulator assets or generated artifacts here.
+*.pt
+*.pth
+*.ckpt
+data/
+Assets/
+eval_result/
+smoke_results/
+__pycache__/
+*.pyc
+*.zip
+*.tar.gz
+.env

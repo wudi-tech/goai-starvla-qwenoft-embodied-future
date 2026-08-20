@@ -1,0 +1,30 @@
+policy_name: starVLA
+protocol: ws
+bench_name: null
+task_name: null
+env_cfg_type: null
+action_type: joint
+gpu_id: null
+seed: null
+eval_batch: true
+
+# XPolicyLab model server
+host: localhost
+port: 6000
+# Disable the outer server keepalive (mirrors inner-loop ping_interval=None):
+# the Isaac eval client blocks 40-90s during scene/model load + first reset,
+# so the 20/20 default closes the socket with 1011 keepalive ping timeout.
+ws_ping_interval_s: null
+ws_ping_timeout_s: null
+
+# Upstream StarVLA runtime
+starvla_root: source_starvla
+checkpoint_path: null
+starvla_server_host: 127.0.0.1
+starvla_server_port: 5694
+unnorm_key: arx_x5
+use_ddim: true
+num_ddim_steps: 10
+image_size: [224, 224]
+execute_horizon: 16
+include_state: auto

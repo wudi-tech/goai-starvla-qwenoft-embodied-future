@@ -1,0 +1,16 @@
+policy_name: starVLA
+model:
+  checkpoint: steps_100000_pytorch_model.pt
+  sha256: 62b8333c9af58467a911150e908cc726dd3c2660fd461871ae9300296391a3cd
+  upstream_revision: 97123d6ef9f88b99801d07f3ad0720ca7c539777
+interface:
+  action_type: joint
+  state_dim: 14
+  action_dim: 14
+  cameras: [head, left_wrist, right_wrist]
+  action_horizon: 50
+  execute_horizon: 16
+  unnorm_key: arx_x5
+batch_inference:
+  eval_batch: true
+  validated_num_envs: 5
