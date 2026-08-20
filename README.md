@@ -1,38 +1,42 @@
 # StarVLA-QwenOFT：统一双臂协同操作系统
 
-GOAI“具身未来”赛题一（通用双臂协作操作能力测试）的项目主页与复现索引。
+GOAI“具身未来”赛题一（通用双臂协作操作能力测试）的项目主页与复现索引。本分支明确区分第一次提交的稳定基线和第二次 X-Eval 申请的 Candidate C 100k。
 
-本项目采用单一、固定的 StarVLA QwenOFT RoboDojo 100k checkpoint，面向 RoboDojo 的 12 项双臂长程操作任务。输入为头部、左腕、右腕三路相机、语言指令和 14D 机器人状态；输出为 14D `joint` 动作序列。
+模型输入为头部、左腕、右腕三路相机、语言指令和 14D 机器人状态；输出为 14D `joint` 动作序列。
 
-## 固定提交身份
+## 双版本身份
 
-| 项 | 值 |
-|---|---|
-| checkpoint | `steps_100000_pytorch_model.pt` |
-| SHA256 | `62b8333c9af58467a911150e908cc726dd3c2660fd461871ae9300296391a3cd` |
-| 上游权重 | `StarVLA/Qwen3vl4b-OFT-RoboDojo` @ `97123d6ef9f88b99801d07f3ad0720ca7c539777` |
-| XPolicyLab | `b01f50a882c119f0643577031b5697db4317a131` |
-| RoboDojo | `a63e16a7a6dad6acce5f08352beea80b9b314870` |
-| action type | `joint` |
-| state/action | 14D / 14D |
-| cameras | `head`, `left_wrist`, `right_wrist` |
-| action horizon / execute horizon | 50 / 16 |
-| normalization | `arx_x5` |
-| batch inference | `eval_batch=true`，已验证 `num_envs=5` |
+| 项 | 稳定基线 | Candidate C 100k |
+|---|---|---|
+| 角色 | 第一次提交参考版本 | 第二次 X-Eval 唯一候选 |
+| checkpoint | `steps_100000_pytorch_model.pt` | `steps_100000_pytorch_model.pt` |
+| 字节数 | 9,785,133,528 | 9,138,620,878 |
+| SHA256 | `62b8333c9af58467a911150e908cc726dd3c2660fd461871ae9300296391a3cd` | `f9653c98f9124065672a659775abe7249f155db96fdeffc288b84ce9a2a87042` |
+| 本地评测 | 600 回合工程评测 33/600、5.50%、score 191.6 | 未运行 600 回合评测 |
+| 官方状态 | 本地数字不是 X-Eval 官方成绩 | 第二次 X-Eval 结果待返回 |
 
-完整代码包和 checkpoint 已依据主办方离线评测通知单独交付。为了避免未经确认的重分发，本公开仓库不包含 RoboDojo 数据、Isaac Sim 资产、checkpoint、缓存、评测视频或其他第三方策略。
+Candidate C 的 60k/80k/100k 小样本筛选仅用于内部选型，三版无法区分；选择 100k 是因为它是完整训练终点，不是性能优越性声明。
+
+## 固定接口
+
+- action type：`joint`
+- state/action：14D / 14D
+- cameras：`head`、`left_wrist`、`right_wrist`
+- action horizon / execute horizon：50 / 16
+- normalization：`arx_x5`
+- batch inference：`eval_batch=true`，验证 `num_envs=5`
 
 ## 复现材料
 
 - `xpolicylab/`：实际使用的 StarVLA 适配层、模型服务、WebSocket 通信与环境启动工具；
-- `configs/inference_config.yaml`：固定推理接口；
-- `docs/code_freeze.md`：代码版本与两项必要运行时修改；
+- `configs/inference_config.yaml`：Candidate C 100k 固定推理接口；
+- `configs/inference_config_stable_baseline.yaml`：稳定基线身份；
+- `docs/code_freeze.md`：代码版本与实际运行差异；
 - `docs/evaluation_boundary.md`：本地结果和 X-Eval 官方结果的边界；
-- `docs/reproduction.md`：离线评测运行要点。
+- `docs/reproduction.md`：离线评测运行要点；
+- `docs/second_xeval_candidate.md`：第二次候选的完整身份。
 
-## 结果边界
-
-本地 Isaac Sim / XPolicyLab 600 回合工程评测结果为 33/600（5.50%）。该数字不是 X-Eval 官方成绩，正式成绩以主办方返回的 X-Eval 结果为准。
+本公开仓库不包含 checkpoint、RoboDojo 数据、Isaac Sim 资产、缓存、评测视频、邮件草稿或个人信息。
 
 ## 开源与第三方说明
 

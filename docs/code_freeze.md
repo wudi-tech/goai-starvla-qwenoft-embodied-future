@@ -3,13 +3,15 @@
 | 组件 | 固定版本 |
 |---|---|
 | RoboDojo | `a63e16a7a6dad6acce5f08352beea80b9b314870` |
-| XPolicyLab | `b01f50a882c119f0643577031b5697db4317a131` |
-| IsaacLab | `afca7b09d60d8beb9c1cb28b43066499940b969b` |
-| curobo | `d17b54ce32cba095c0b000c4c58777075d11de0e` |
+| XPolicyLab / 训练基准 | `b01f50a882c119f0643577031b5697db4317a131` |
 
-完整代码归档中包含以下两项必要修改：
+实际训练与部署工作树存在已冻结差异，不能描述为 clean checkout：
 
-1. `policy/starVLA/deploy.yml`：`eval_batch: false` 改为 `eval_batch: true`，用于批推理；
-2. `policy/starVLA/source_starvla/deployment/model_server/server_policy.py`：`idle_timeout` 默认值由 `1800` 改为 `-1`，防止推理服务因空闲自动关闭。
+- 训练 diff SHA256：`c331e6d473480a03d249628006c88b68c053acc9c3caacf7ebcd492c1beed724`
+- 部署 diff SHA256：`4169106fb4efd963f3c9f8d37e72b21d90718f5885cb70467885a0279e3d9356`
 
-上述修改不改变模型权重、三相机接口、14D `joint` 动作、动作窗口或评测统计口径。
+主要差异包括：启用 `arx_x5` embodiment、Qwen3 配置兼容、训练保存里程碑、延后 Accelerator 初始化，以及部署 `eval_batch=true`。
+
+本轮实际 `server_policy.py` 默认 `idle_timeout=1800`。旧材料中关于改为 `-1` 的描述不适用于 Candidate C，本分支已纠正该口径。
+
+已验证运行环境：Python 3.11.15、PyTorch 2.7.0+cu128、CUDA 12.8、NCCL 2.26.2、transformers 4.57.0、RTX 5090、driver 580.76.05。
