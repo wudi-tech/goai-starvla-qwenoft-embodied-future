@@ -1,0 +1,16 @@
+# Keep explanatory files stable across Windows and Linux checkouts.
+*.md text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+requirements-validation.txt text eol=lf
+/xpolicylab/scripts/internal/*.py text eol=lf
+/xpolicylab/scripts/internal/tests/*.py text eol=lf
+
+# Preserve archived source bytes, including historical CRLF, for source hashes.
+/archive/** -text whitespace=cr-at-eol
+/results/** -text whitespace=cr-at-eol
+/audit/** -text whitespace=cr-at-eol
+/scripts/historical/** -text whitespace=cr-at-eol
+
+# Unified-diff context lines intentionally carry their leading space.
+/archive/training/candidate_c/*.diff -whitespace

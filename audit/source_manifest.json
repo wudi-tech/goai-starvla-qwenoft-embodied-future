@@ -1,0 +1,575 @@
+{
+  "curation_date": "2026-10-24",
+  "scope": "copied or redacted archival files; authored summaries are listed in docs/materials_index.md",
+  "files": [
+    {
+      "published_path": "results/local600/final_summary_100k.json",
+      "source_path": "docs/handoff/final_summary_100k.json",
+      "source_sha256": "2d7551a56eed446f46943805e167bf8128e244264799fbcbb9a778b2f1069251",
+      "published_sha256": "2d7551a56eed446f46943805e167bf8128e244264799fbcbb9a778b2f1069251",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/final_summary_100k.tsv",
+      "source_path": "docs/handoff/final_summary_100k.tsv",
+      "source_sha256": "cda43dd49055f6761576a8dc5c15de13ccc6c124bcdf192249e5bed54f891cd0",
+      "published_sha256": "cda43dd49055f6761576a8dc5c15de13ccc6c124bcdf192249e5bed54f891cd0",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/final_summary_20k.json",
+      "source_path": "docs/handoff/final_summary_20k.json",
+      "source_sha256": "5306a959a00fd0772223099436ef01018d4f399eb95f8ecaed823d1b445c791b",
+      "published_sha256": "5306a959a00fd0772223099436ef01018d4f399eb95f8ecaed823d1b445c791b",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/final_summary_20k.tsv",
+      "source_path": "docs/handoff/final_summary_20k.tsv",
+      "source_sha256": "c1f56429f241d55fc657e75811324f2c4a4f0ac04f7c78d1ab0047db1a73a2ef",
+      "published_sha256": "c1f56429f241d55fc657e75811324f2c4a4f0ac04f7c78d1ab0047db1a73a2ef",
+      "transformations": []
+    },
+    {
+      "published_path": "results/diagnostics/task-analysis.tsv",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/task-analysis.tsv",
+      "source_sha256": "eed29f3ef756c6ce16c9e1c9ebd898f4913d46213005ff90a1b94394701e5222",
+      "published_sha256": "eed29f3ef756c6ce16c9e1c9ebd898f4913d46213005ff90a1b94394701e5222",
+      "transformations": []
+    },
+    {
+      "published_path": "results/diagnostics/diagnostic-selections.tsv",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-selections.tsv",
+      "source_sha256": "a070ba50c5c14b0b6b103f4aa7919619e4c846a3fabd016c94bab1ea422cfd7a",
+      "published_sha256": "a070ba50c5c14b0b6b103f4aa7919619e4c846a3fabd016c94bab1ea422cfd7a",
+      "transformations": []
+    },
+    {
+      "published_path": "results/diagnostics/diagnostic-index.tsv",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-index.tsv",
+      "source_sha256": "cadcb45679a9ad8e8bceac3fbb96941e3e93797fb5674cdd9bc80e961fc60fc1",
+      "published_sha256": "cadcb45679a9ad8e8bceac3fbb96941e3e93797fb5674cdd9bc80e961fc60fc1",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/arrange_largest_number/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/arrange_largest_number/_result.json",
+      "source_sha256": "4b9310f93802cb5db67225b26d98dc6dc84a59ac476493f7a3822999457f0011",
+      "published_sha256": "4b9310f93802cb5db67225b26d98dc6dc84a59ac476493f7a3822999457f0011",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/arrange_largest_number_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/arrange_largest_number_random/_result.json",
+      "source_sha256": "8bdd76adbbce6834b9d63ff9a635085e72c5700bb62591f2cce2832ce64ba661",
+      "published_sha256": "8bdd76adbbce6834b9d63ff9a635085e72c5700bb62591f2cce2832ce64ba661",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/fold_clothes/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/fold_clothes/_result.json",
+      "source_sha256": "52117ca1bdbbc10e6db5c6ce78dc011007170df46f8478b6a95ec54812038940",
+      "published_sha256": "52117ca1bdbbc10e6db5c6ce78dc011007170df46f8478b6a95ec54812038940",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/fold_clothes_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/fold_clothes_random/_result.json",
+      "source_sha256": "f0bb98d03b6ce61d099e7cec0e9b6016c71ab7e302c9880aecf1eec42016ad38",
+      "published_sha256": "f0bb98d03b6ce61d099e7cec0e9b6016c71ab7e302c9880aecf1eec42016ad38",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/hang_mugs/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/hang_mugs/_result.json",
+      "source_sha256": "41d8337e0a171e5881df729b95b2425727081e164f4de963cd0d353286f97381",
+      "published_sha256": "41d8337e0a171e5881df729b95b2425727081e164f4de963cd0d353286f97381",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/hang_mugs_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/hang_mugs_random/_result.json",
+      "source_sha256": "2dad29db3a97a8ada217fe7512fdf5d0c7f845778cfebf5862f1d42232494fde",
+      "published_sha256": "2dad29db3a97a8ada217fe7512fdf5d0c7f845778cfebf5862f1d42232494fde",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/make_toast/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/make_toast/_result.json",
+      "source_sha256": "edd8b843807d9e6ddd3c4140f2a3ba366f051fbc2dce806056d954d95b200cdd",
+      "published_sha256": "edd8b843807d9e6ddd3c4140f2a3ba366f051fbc2dce806056d954d95b200cdd",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/make_toast_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/make_toast_random/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/pack_objects_into_box/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/pack_objects_into_box/_result.json",
+      "source_sha256": "620dbedb7b02dbfd052d3fec98ad798759edf92caa05d77fd395621d69aef80a",
+      "published_sha256": "620dbedb7b02dbfd052d3fec98ad798759edf92caa05d77fd395621d69aef80a",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/pack_objects_into_box_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/pack_objects_into_box_random/_result.json",
+      "source_sha256": "92fe874f5f484b6d3d47b32e6e03c9352debc85b52025403252f858699a5f0e1",
+      "published_sha256": "92fe874f5f484b6d3d47b32e6e03c9352debc85b52025403252f858699a5f0e1",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/pour_liquid_into_cup/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/pour_liquid_into_cup/_result.json",
+      "source_sha256": "494131ceddce0205cbb4528abe4c9a2dde2d339cfcf38bf809d9fe3d8ca4fec7",
+      "published_sha256": "494131ceddce0205cbb4528abe4c9a2dde2d339cfcf38bf809d9fe3d8ca4fec7",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/pour_liquid_into_cup_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/pour_liquid_into_cup_random/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/push_T/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/push_T/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/push_T_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/push_T_random/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/sort_nesting_dolls_by_size/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/sort_nesting_dolls_by_size/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/sort_nesting_dolls_by_size_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/sort_nesting_dolls_by_size_random/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/stack_blocks/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/stack_blocks/_result.json",
+      "source_sha256": "6f2d9de3572b01538942a9d6019d6c5ba750a67462a33b68c643fae0548bf72f",
+      "published_sha256": "6f2d9de3572b01538942a9d6019d6c5ba750a67462a33b68c643fae0548bf72f",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/stack_blocks_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/stack_blocks_random/_result.json",
+      "source_sha256": "e14b42bcdffa7b31ea032dd2bb9780713d161d0f58af72e8478c5ac82886cb25",
+      "published_sha256": "e14b42bcdffa7b31ea032dd2bb9780713d161d0f58af72e8478c5ac82886cb25",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/stack_bowls/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/stack_bowls/_result.json",
+      "source_sha256": "a6f69808aa84567e16dd9ce18be6e9087106f2fc44be0727bce689c279c7de57",
+      "published_sha256": "a6f69808aa84567e16dd9ce18be6e9087106f2fc44be0727bce689c279c7de57",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/stack_bowls_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/stack_bowls_random/_result.json",
+      "source_sha256": "10e9c9e631f50ad88b7d80bd6ec4327731654cffaa127d5ee694ae8f7b8c855b",
+      "published_sha256": "10e9c9e631f50ad88b7d80bd6ec4327731654cffaa127d5ee694ae8f7b8c855b",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/store_laptop_and_headphones/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/store_laptop_and_headphones/_result.json",
+      "source_sha256": "1c28292dd01437f57997f3855534b2769d9fe9b8deed4983be8792a4586db252",
+      "published_sha256": "1c28292dd01437f57997f3855534b2769d9fe9b8deed4983be8792a4586db252",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/store_laptop_and_headphones_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/store_laptop_and_headphones_random/_result.json",
+      "source_sha256": "c197e8a986678e47fea94a3a42677bad629aa1338cad52b2257a4196bbf7f0a7",
+      "published_sha256": "c197e8a986678e47fea94a3a42677bad629aa1338cad52b2257a4196bbf7f0a7",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/sweep_blocks/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/sweep_blocks/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "results/local600/baseline_raw/sweep_blocks_random/_result.json",
+      "source_path": "artifacts/qwenoft-formal600-2026-08-15/diagnostic-videos/sweep_blocks_random/_result.json",
+      "source_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "published_sha256": "670228d5a2619a793ee0c27fdd5447a150aa9dffbd101f0145d7329721fef316",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/reports/2026-08-15-baseline600.md",
+      "source_path": "docs/reports/2026-08-15-qwenoft-formal600-evaluation-report.md",
+      "source_sha256": "e57aa1f154bbe49177acd99c4c00019e7bb82422d16877104beeb9236251d95c",
+      "published_sha256": "fe8d2130bb7c911903ca86efb0f844bca36d0773627989dd1e2d7f4e58d3afa5",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-15-failure-analysis.md",
+      "source_path": "docs/reports/2026-08-15-qwenoft-task-failure-analysis.md",
+      "source_sha256": "7cd78af655a28fbe21a29e8bf6f05767caacc0dc7d4dcdefb596b2998429e0d3",
+      "published_sha256": "e9a78f94920b05e89668d7ea3290fe90afd4c7832660e5d2b7cfb68fbe1b2dae",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-15-repeatability.md",
+      "source_path": "docs/reports/2026-08-15-qwenoft-baseline-checkpoint-comparison.md",
+      "source_sha256": "97260ee769680bec213944836addd0712b0ba79649ad7a5333fbe8a13d19ae83",
+      "published_sha256": "01e9d4a5ff101f9c42fd32404314871f10be38a2d838f701298579d29d124e51",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-19-two-model-comparison.md",
+      "source_path": "docs/handoff/2026-08-19-两版模型600回合评测结果详细汇总.md",
+      "source_sha256": "b99aba58d2b9fb7cf972a18f99679c66cd02e9064de768be70e04f910f0a39b5",
+      "published_sha256": "fc250c6b3ce7dae3ab4f228606bea07105a5d0e4e1a31b09131c0a4120122ebf",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-17-gpu-topology.md",
+      "source_path": "docs/handoff/2026-08-17-qwenoft-ab-p3-test-report.md",
+      "source_sha256": "6fc426acf7a60a2fe14d3b2cbe668d0195d7b9a785aaf3ea23ee8f9fb6455c97",
+      "published_sha256": "8ef1c4cb44ca5199e169d133ea090853464b4f5a8b36b840012fb6e6eb671f0a",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-16-nccl-failure.md",
+      "source_path": "docs/handoff/2026-08-16-qwenoft-dual-gpu-nccl-error-report.md",
+      "source_sha256": "0ef47ff7ffeb68e957cbd6c1efc7f8dd863b7142bd40444682833cc48333f82a",
+      "published_sha256": "5923b9b2cf0f5a4986b99a6ea069bdebb10cdd02bce5e06104c453ad1a2d387a",
+      "transformations": [
+        "removed historical SSH host and port",
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-14-conda-recovery.md",
+      "source_path": "docs/handoff/2026-08-14-qwenoft-recovery-review-fix.md",
+      "source_sha256": "23f593588ec4d625e64af2ea0bd5ff845432101258645c8bc7fee092f613afcb",
+      "published_sha256": "3ec4e8b51a052d1da58dc9be5f6ff79545df1ee291a4d6a176c2e2b1b7d6e609",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-15-evaluation-finalization.md",
+      "source_path": "docs/handoff/2026-08-15-qwenoft-formal600-final-status.md",
+      "source_sha256": "0d07fcab3b91fd73844042b97ac93ebdabb510067cccf05c0b07694fe45e0f6d",
+      "published_sha256": "28c337e8586ef8ba1222283edb882837a21c79f5e63fd5aae5dc67a8582ff67c",
+      "transformations": [
+        "removed historical SSH host and port",
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-20-process-leak.md",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/quick_screen_incident_20260820_1354.md",
+      "source_sha256": "22cf7b6d6577f06abc268195c4a9ae0508a413b51022462a60cb4125c686c318",
+      "published_sha256": "8da53e2933a3f71882091f055809151fe8ddb6f7ddf21fa5842ccf5ab13b24e5",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-20-error-classifier.md",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/quick_screen_classifier_incident_20260820_1424.md",
+      "source_sha256": "9437be158002017d869b6679828e5885bafb1259f8a44ac36a4e5ca7e09b7165",
+      "published_sha256": "ddd2afcf24482f81191814501405e023732833c919e7c677b47e3c324ab04d3a",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-20-candidate-screening.md",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/tiebreak_pour_comparison_20260820.md",
+      "source_sha256": "26df214b5c4f8e121b0bb863212036b5366c9bca3f1ada013f3dde0f00679762",
+      "published_sha256": "41de81d525fba10891623b166ecf51e6180e7f943582415c6f7da9b1dbebe9d9",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-20-candidate-training.md",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/remote_checkpoint_manifest.md",
+      "source_sha256": "0213be80611bcb4a4efc188973b5252e27b7f5a137f873c7e3d318c9a0e71c6c",
+      "published_sha256": "365bb31311e3ebc492a5d9bec1bbdee7f018b70104f9b2a9fa1d37b783d86b28",
+      "transformations": [
+        "removed historical SSH host and port",
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/reports/2026-08-20-runtime-freeze.md",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/runtime_and_code_freeze.md",
+      "source_sha256": "4af6ff3db52c82ce0f2582e30179f5ce26b2a290353e1f1d3befc1361cb9e0c2",
+      "published_sha256": "c31d1f7b7c31341e5d0b3168cc1a1ede01f4d151897197f9f766140deccb6b5a",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/designs/2026-08-05-genbivla-proposal.md",
+      "source_path": "docs/superpowers/specs/2026-08-05-goai-genbivla-design.md",
+      "source_sha256": "c83868bf590f9b1fb552e1c0a953923c18346220e5bae3a033600c4f7efc81b0",
+      "published_sha256": "2b88afe73a4f311d9c100dc71f5a3f321764177d2109ce73ef1aa1267fa52440",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/designs/2026-08-08-act-raw-hdf5-design.md",
+      "source_path": "docs/superpowers/specs/2026-08-08-act-raw-hdf5-training-design.md",
+      "source_sha256": "1292280a44bd5b749f4031f106d31fa847ab03666320caf6f749d70ff4bfded3",
+      "published_sha256": "85930e68fb60493dfff32bfff4cb70463157310183a0fce1293cddeb9be38db5",
+      "transformations": [
+        "added historical-snapshot banner; normalized UTF-8/LF"
+      ]
+    },
+    {
+      "published_path": "archive/training/candidate_c/training_config.yaml",
+      "source_path": "第二次提交_20260820/02_xeval_official_application/source_freeze/training_config.yaml",
+      "source_sha256": "9b12b9aa7625fd1e801534abdce9083c3a5ba2412c2f6ea472c1d57ecf99d5cf",
+      "published_sha256": "91d5bf7beb8a6115621941315ce88fcbc9089549b85007df59eab30a18b515a9",
+      "transformations": [
+        "removed YAML trailing whitespace; normalized UTF-8/LF without changing values"
+      ]
+    },
+    {
+      "published_path": "archive/training/candidate_c/checkpoint_config.yaml",
+      "source_path": "第二次提交_20260820/02_xeval_official_application/source_freeze/checkpoint_config.yaml",
+      "source_sha256": "b48d07f4ba032efe01ea6d62e8a5fcde34574ebe3b5e01f91f01658aa29738fc",
+      "published_sha256": "b48d07f4ba032efe01ea6d62e8a5fcde34574ebe3b5e01f91f01658aa29738fc",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/checkpoint_config.full.yaml",
+      "source_path": "第二次提交_20260820/02_xeval_official_application/source_freeze/checkpoint_config.full.yaml",
+      "source_sha256": "91d5bf7beb8a6115621941315ce88fcbc9089549b85007df59eab30a18b515a9",
+      "published_sha256": "91d5bf7beb8a6115621941315ce88fcbc9089549b85007df59eab30a18b515a9",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/dataset_statistics.json",
+      "source_path": "第二次提交_20260820/02_xeval_official_application/source_freeze/dataset_statistics.json",
+      "source_sha256": "df6036dc053c9b2407023d601d995c56d6a28e1deeb11bb9321d92fc5d466a2c",
+      "published_sha256": "df6036dc053c9b2407023d601d995c56d6a28e1deeb11bb9321d92fc5d466a2c",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/launch.sh",
+      "source_path": "第二次提交_20260820/02_xeval_official_application/source_freeze/launch.sh",
+      "source_sha256": "f611484ca485e20987418964ef6d2d85181ff26c673685afd7fc12bd9c94b901",
+      "published_sha256": "f611484ca485e20987418964ef6d2d85181ff26c673685afd7fc12bd9c94b901",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/training_worktree.diff",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/training_worktree.diff",
+      "source_sha256": "c331e6d473480a03d249628006c88b68c053acc9c3caacf7ebcd492c1beed724",
+      "published_sha256": "c331e6d473480a03d249628006c88b68c053acc9c3caacf7ebcd492c1beed724",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/deployment_worktree.diff",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/deployment_worktree.diff",
+      "source_sha256": "4169106fb4efd963f3c9f8d37e72b21d90718f5885cb70467885a0279e3d9356",
+      "published_sha256": "4169106fb4efd963f3c9f8d37e72b21d90718f5885cb70467885a0279e3d9356",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/modified_files/examples/XPolicyLab/train_files/data_registry/data_config.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/training_freeze/modified_files/examples/XPolicyLab/train_files/data_registry/data_config.py",
+      "source_sha256": "7759ab217fddbd5760afc6bb778d84b0a8a8fc401ea5de8d563e96c29e928397",
+      "published_sha256": "7759ab217fddbd5760afc6bb778d84b0a8a8fc401ea5de8d563e96c29e928397",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/modified_files/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/training_freeze/modified_files/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py",
+      "source_sha256": "0ab6a8b5c0c73d6eddf8bd498f79794d9734dec5faa7a7f6b29ad0e09cda2c57",
+      "published_sha256": "0ab6a8b5c0c73d6eddf8bd498f79794d9734dec5faa7a7f6b29ad0e09cda2c57",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/modified_files/starVLA/model/modules/vlm/QWen3.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/training_freeze/modified_files/starVLA/model/modules/vlm/QWen3.py",
+      "source_sha256": "a6df9e8f08ac7be64f10efa3d9be8b0a179af8a00c74386854bc0704da4e0c5c",
+      "published_sha256": "a6df9e8f08ac7be64f10efa3d9be8b0a179af8a00c74386854bc0704da4e0c5c",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/modified_files/starVLA/training/train_starvla.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/training_freeze/modified_files/starVLA/training/train_starvla.py",
+      "source_sha256": "a3d6280241f04a7185c35ea200610b49f9f25ba47f2e44b1acc3aca665fb3659",
+      "published_sha256": "a3d6280241f04a7185c35ea200610b49f9f25ba47f2e44b1acc3aca665fb3659",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/training/candidate_c/LICENSE_StarVLA",
+      "source_path": "goai_starvla_qwenoft_github/xpolicylab/policy/starVLA/source_starvla/LICENSE",
+      "source_sha256": "6ca01970c4e66d2d5bebd0a00b55de5b4081017e0f0c97ddb415cda28e3e8ffa",
+      "published_sha256": "6ca01970c4e66d2d5bebd0a00b55de5b4081017e0f0c97ddb415cda28e3e8ffa",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/final_summary.py",
+      "source_path": "docs/handoff/final_summary.py",
+      "source_sha256": "8a0d43f071cc7137efd6daedd86c4899b60e6071ed52dac982d0af6b92500961",
+      "published_sha256": "8a0d43f071cc7137efd6daedd86c4899b60e6071ed52dac982d0af6b92500961",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/derive_config_target20k.py",
+      "source_path": "docs/handoff/derive_config_target20k.py",
+      "source_sha256": "74c062cafb8e64040449cf3e05c58960aa5b8d2fbf832c49ee90c88121e14c15",
+      "published_sha256": "74c062cafb8e64040449cf3e05c58960aa5b8d2fbf832c49ee90c88121e14c15",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/subset_meta_890.py",
+      "source_path": "docs/handoff/subset_meta_890.py",
+      "source_sha256": "035aa78c3364ded60becbb261421ce36e0c69d63e8d3356eb265c88c6fd74770",
+      "published_sha256": "035aa78c3364ded60becbb261421ce36e0c69d63e8d3356eb265c88c6fd74770",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/nccl_smoke.py",
+      "source_path": "docs/handoff/nccl_smoke.py",
+      "source_sha256": "c04495c8649bd3fdde4db33a9fecdd32912e165e7b4270d53e723b393a9c2f2e",
+      "published_sha256": "c04495c8649bd3fdde4db33a9fecdd32912e165e7b4270d53e723b393a9c2f2e",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/run_formal_24x25.sh",
+      "source_path": "docs/handoff/run_formal_24x25.sh",
+      "source_sha256": "1cb18674120a530d611cb763f964acca75fd028829756f01399a09616a74d33f",
+      "published_sha256": "1cb18674120a530d611cb763f964acca75fd028829756f01399a09616a74d33f",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/run_formal_24x25_resume2.sh",
+      "source_path": "docs/handoff/run_formal_24x25_resume2.sh",
+      "source_sha256": "0c6537a86c9719e0cefe78c12b4ce7de1717f4bd202df0eb90b927849f20da17",
+      "published_sha256": "0c6537a86c9719e0cefe78c12b4ce7de1717f4bd202df0eb90b927849f20da17",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/run_quick_screen_remote_v3.sh",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/run_quick_screen_remote_v3.sh",
+      "source_sha256": "97dcccc68b34ab8d1f1f47d83fd699ec14eda23b86219d7d4a448701736fedc7",
+      "published_sha256": "97dcccc68b34ab8d1f1f47d83fd699ec14eda23b86219d7d4a448701736fedc7",
+      "transformations": []
+    },
+    {
+      "published_path": "scripts/historical/run_tiebreak_pour_remote.sh",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/run_tiebreak_pour_remote.sh",
+      "source_sha256": "2eb38a474f54f0882b650cbe12041f8c17c57769088cecdecd473172dc2e9dec",
+      "published_sha256": "2eb38a474f54f0882b650cbe12041f8c17c57769088cecdecd473172dc2e9dec",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/scripts/internal/eval_guardrails.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/scripts/internal/eval_guardrails.py",
+      "source_sha256": "82c07459e1679fb522b6377f28400494233e57db60a6165ce7a1f9a272c5728e",
+      "published_sha256": "82c07459e1679fb522b6377f28400494233e57db60a6165ce7a1f9a272c5728e",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/scripts/internal/task_inventory.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/scripts/internal/task_inventory.py",
+      "source_sha256": "ec82252b0f87fa5a3dbec2f682c170b25cbe47fe181e431a81df2c4b0675084d",
+      "published_sha256": "ec82252b0f87fa5a3dbec2f682c170b25cbe47fe181e431a81df2c4b0675084d",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/scripts/internal/generalization_24.txt",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/scripts/internal/generalization_24.txt",
+      "source_sha256": "de96f54645891c9c2820738edd75f2f97726b96ec5bcd330311dacd913034af7",
+      "published_sha256": "de96f54645891c9c2820738edd75f2f97726b96ec5bcd330311dacd913034af7",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/scripts/internal/tests/test_eval_guardrails.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/scripts/internal/tests/test_eval_guardrails.py",
+      "source_sha256": "5348123d0afd803457271db0005458d434e8d3748980bc9e42d27c8b1d3aaab3",
+      "published_sha256": "5348123d0afd803457271db0005458d434e8d3748980bc9e42d27c8b1d3aaab3",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/unmatched_tests/test_eval_guardrails_shards.py.snapshot",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/scripts/internal/tests/test_eval_guardrails_shards.py",
+      "source_sha256": "6b6ae63c75d448106bb009954c6aaace22f908a355ef24fb94a62b0e96536239",
+      "published_sha256": "6b6ae63c75d448106bb009954c6aaace22f908a355ef24fb94a62b0e96536239",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/task/RoboDojo/config/_task.yml",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/task/RoboDojo/config/_task.yml",
+      "source_sha256": "655a87cd59fa6272bf352d32deb8ade162737b49a9824e16d428fecf0803380b",
+      "published_sha256": "027b6e0d5112c1e7de7d731c126fe729cc43e2f2e4ec83697d9c5a3a64b28f3c",
+      "transformations": [
+        "removed YAML trailing whitespace; normalized UTF-8/LF without changing values"
+      ]
+    },
+    {
+      "published_path": "archive/robodojo/task/RoboDojo/task_registry.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/task/RoboDojo/task_registry.py",
+      "source_sha256": "11218028f772d9253ee709a7d85aa72d1e1fd87e4f8d33ee3787d6064438f9ab",
+      "published_sha256": "11218028f772d9253ee709a7d85aa72d1e1fd87e4f8d33ee3787d6064438f9ab",
+      "transformations": []
+    },
+    {
+      "published_path": "archive/robodojo/LICENSE",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/RoboDojo/LICENSE",
+      "source_sha256": "7794bb06af8fe5485ca912454ad1665ccd7846c45f9c2b1258658e480948cdbe",
+      "published_sha256": "7794bb06af8fe5485ca912454ad1665ccd7846c45f9c2b1258658e480948cdbe",
+      "transformations": []
+    },
+    {
+      "published_path": "xpolicylab/scripts/internal/audit_keepalive.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/XPolicyLab/scripts/internal/audit_keepalive.py",
+      "source_sha256": "9a8309a35cb0141db87d31c9440f1ddbbd3e41c81969bbed3aa221436ac3fd77",
+      "published_sha256": "9a8309a35cb0141db87d31c9440f1ddbbd3e41c81969bbed3aa221436ac3fd77",
+      "transformations": []
+    },
+    {
+      "published_path": "xpolicylab/scripts/internal/tests/test_audit_keepalive.py",
+      "source_path": "第二次提交_20260820/05_validation_and_reports/code_archive_extract_test/code/XPolicyLab/scripts/internal/tests/test_audit_keepalive.py",
+      "source_sha256": "42f20ca5ffb06d25caf1761e8b57bcec222ee211ef24c3ec85b6997301ae736f",
+      "published_sha256": "42f20ca5ffb06d25caf1761e8b57bcec222ee211ef24c3ec85b6997301ae736f",
+      "transformations": []
+    }
+  ]
+}

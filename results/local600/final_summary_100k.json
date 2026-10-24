@@ -1,0 +1,253 @@
+{
+  "checkpoint": "steps_100000_pytorch_model",
+  "official_revision": "abf44de4b10b5c7efdc68f07630157329dbbcb7f",
+  "tasks": 24,
+  "total_successes": 33,
+  "total_episodes": 600,
+  "total_score": 191.6,
+  "overall_success_rate": 0.055,
+  "problems": [],
+  "log_sha256": "222941a9b71e8655971e4e490ce13d1edb7b8d25054e26a699c930a9bd47b1cb",
+  "per_task": [
+    {
+      "task": "hang_mugs",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_hang_mugs",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 7.799999999999999,
+      "video_ok": true
+    },
+    {
+      "task": "fold_clothes",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_fold_clothes",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.24,
+      "successes": 6,
+      "score": 27.200000000000003,
+      "video_ok": true
+    },
+    {
+      "task": "arrange_largest_number",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_arrange_largest_number",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 2.0,
+      "video_ok": true
+    },
+    {
+      "task": "sort_nesting_dolls_by_size",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_sort_nesting_dolls_by_size",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_blocks",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_stack_blocks",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.24,
+      "successes": 6,
+      "score": 28.800000000000004,
+      "video_ok": true
+    },
+    {
+      "task": "make_toast",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_make_toast",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 7.000000000000001,
+      "video_ok": true
+    },
+    {
+      "task": "pack_objects_into_box",
+      "run_dir": "2026-08-14-qwenoft-formal600-recovery3-canary-2x5090_pack_objects_into_box",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 4.6,
+      "video_ok": true
+    },
+    {
+      "task": "pour_liquid_into_cup",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_pour_liquid_into_cup",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.4,
+      "successes": 10,
+      "score": 40.0,
+      "video_ok": true
+    },
+    {
+      "task": "push_T",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_push_T",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_bowls",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_stack_bowls",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.36,
+      "successes": 9,
+      "score": 38.400000000000006,
+      "video_ok": true
+    },
+    {
+      "task": "store_laptop_and_headphones",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_store_laptop_and_headphones",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 17.6,
+      "video_ok": true
+    },
+    {
+      "task": "sweep_blocks",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_sweep_blocks",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "hang_mugs_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_hang_mugs_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.6,
+      "video_ok": true
+    },
+    {
+      "task": "fold_clothes_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_fold_clothes_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.08,
+      "successes": 2,
+      "score": 8.0,
+      "video_ok": true
+    },
+    {
+      "task": "arrange_largest_number_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_arrange_largest_number_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.2,
+      "video_ok": true
+    },
+    {
+      "task": "sort_nesting_dolls_by_size_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_sort_nesting_dolls_by_size_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_blocks_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_stack_blocks_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.6,
+      "video_ok": true
+    },
+    {
+      "task": "make_toast_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery4-gpu1_make_toast_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "pack_objects_into_box_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_pack_objects_into_box_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.8,
+      "video_ok": true
+    },
+    {
+      "task": "pour_liquid_into_cup_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_pour_liquid_into_cup_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "push_T_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_push_T_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_bowls_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_stack_bowls_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 2.4,
+      "video_ok": true
+    },
+    {
+      "task": "store_laptop_and_headphones_random",
+      "run_dir": "2026-08-13-qwenoft-formal600-4x5090_store_laptop_and_headphones_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 5.6,
+      "video_ok": true
+    },
+    {
+      "task": "sweep_blocks_random",
+      "run_dir": "2026-08-15-qwenoft-formal600-recovery3-main-2x5090_sweep_blocks_random",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    }
+  ]
+}

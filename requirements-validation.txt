@@ -1,0 +1,4 @@
+# Lightweight archived guardrail and keepalive-audit tests only.
+# Full StarVLA / Isaac Sim runtime dependencies are managed separately.
+pytest==9.1.1
+PyYAML==6.0.3

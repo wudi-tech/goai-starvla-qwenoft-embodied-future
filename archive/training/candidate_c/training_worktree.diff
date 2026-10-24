@@ -1,0 +1,89 @@
+diff --git a/policy/starVLA/source_starvla/examples/XPolicyLab/train_files/data_registry/data_config.py b/policy/starVLA/source_starvla/examples/XPolicyLab/train_files/data_registry/data_config.py
+index 1143d1d..3b8be13 100644
+--- a/policy/starVLA/source_starvla/examples/XPolicyLab/train_files/data_registry/data_config.py
++++ b/policy/starVLA/source_starvla/examples/XPolicyLab/train_files/data_registry/data_config.py
+@@ -21,7 +21,7 @@ from starVLA.dataloader.gr00t_lerobot.transform.state_action import (
+ 
+ 
+ class XPolicyArxX5DataConfig:
+-    embodiment_tag = EmbodimentTag.NEW_EMBODIMENT
++    embodiment_tag = "arx_x5"
+ 
+     video_keys = [
+         "video.cam_high",
+diff --git a/policy/starVLA/source_starvla/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py b/policy/starVLA/source_starvla/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py
+index b4cb438..fa49b3f 100644
+--- a/policy/starVLA/source_starvla/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py
++++ b/policy/starVLA/source_starvla/starVLA/dataloader/gr00t_lerobot/embodiment_tags.py
+@@ -65,6 +65,10 @@ class EmbodimentTag(Enum):
+     """ The ARX5 single-arm robot.
+     """
+ 
++    ARX_X5 = 'arx_x5'
++    """ The ARX X5 dual-arm robot (RoboDojo).
++    """
++
+     DOS_W1 = 'dos-w1'
+     """ The DOS-W1 single-arm robot.
+     """
+diff --git a/policy/starVLA/source_starvla/starVLA/model/modules/vlm/QWen3.py b/policy/starVLA/source_starvla/starVLA/model/modules/vlm/QWen3.py
+index e6b4662..7b8f917 100644
+--- a/policy/starVLA/source_starvla/starVLA/model/modules/vlm/QWen3.py
++++ b/policy/starVLA/source_starvla/starVLA/model/modules/vlm/QWen3.py
+@@ -67,6 +67,18 @@ class _QWen3_VL_Interface(nn.Module):
+         processor = AutoProcessor.from_pretrained(model_id)
+         processor.tokenizer.padding_side = "left"
+ 
++        enable_grad_ckpt = bool(qwenvl_config.get("enable_gradient_checkpointing", False))
++        if enable_grad_ckpt:
++            try:
++                model.gradient_checkpointing_enable(
++                    gradient_checkpointing_kwargs={"use_reentrant": False}
++                )
++                if hasattr(model, "enable_input_require_grads"):
++                    model.enable_input_require_grads()
++                print("[QWen3] gradient_checkpointing ENABLED (use_reentrant=False)", flush=True)
++            except Exception as e:
++                print(f"[QWen3] failed to enable gradient_checkpointing: {e}", flush=True)
++
+         self.model = model
+         self.processor = processor
+         self.config = config
+diff --git a/policy/starVLA/source_starvla/starVLA/training/train_starvla.py b/policy/starVLA/source_starvla/starVLA/training/train_starvla.py
+index 15f1ba7..bc4efdf 100644
+--- a/policy/starVLA/source_starvla/starVLA/training/train_starvla.py
++++ b/policy/starVLA/source_starvla/starVLA/training/train_starvla.py
+@@ -38,9 +38,8 @@ from starVLA.model.framework.share_tools import apply_config_compat
+ from starVLA.training.trainer_utils.config_tracker import AccessTrackedConfig, wrap_config
+ from starVLA.training.trainer_utils.trainer_tools import TrainerUtils, build_param_lr_groups, setup_optimizer_and_scheduler, normalize_dotlist_args
+ 
+-deepspeed_plugin = DeepSpeedPlugin()
+-accelerator = Accelerator(deepspeed_plugin=deepspeed_plugin)
+-accelerator.print(accelerator.state)
++deepspeed_plugin = None
++accelerator = None
+ 
+ # Sane Defaults
+ os.environ["TOKENIZERS_PARALLELISM"] = "false"
+@@ -329,7 +328,8 @@ class VLATrainer(TrainerUtils):
+             step_metrics["timing/model"] = t_end_model - t_start_model
+             self._log_metrics(step_metrics)
+ 
+-            if self.completed_steps % self.config.trainer.save_interval == 0 and self.completed_steps > 0:
++            _candidate_c_save_steps = {5000, 10000, 20000, 40000, 60000, 80000, 100000}
++            if self.completed_steps in _candidate_c_save_steps:
+                 self._save_checkpoint()
+ 
+             if self.completed_steps >= self.config.trainer.max_train_steps:
+@@ -424,6 +424,11 @@ def main(cfg) -> None:
+ 
+     output_dir = setup_directories(cfg=cfg)
+     vla = build_framework(cfg)
++
++    global accelerator
++    accelerator = Accelerator(deepspeed_plugin=deepspeed_plugin)
++    accelerator.print(accelerator.state)
++
+     vla_train_dataloader = prepare_data(cfg=cfg, accelerator=accelerator, output_dir=output_dir)
+     optimizer, lr_scheduler = setup_optimizer_and_scheduler(model=vla, cfg=cfg)
+ 

@@ -15,3 +15,5 @@
 本轮实际 `server_policy.py` 默认 `idle_timeout=1800`。旧材料中关于改为 `-1` 的描述不适用于 Candidate C，本分支已纠正该口径。
 
 已验证运行环境：Python 3.11.15、PyTorch 2.7.0+cu128、CUDA 12.8、NCCL 2.26.2、transformers 4.57.0、RTX 5090、driver 580.76.05。
+
+以上指 2026-08-20 历史记录中的实际环境，本次没有重新建立该 GPU 环境。完整差异和修改后的 4 份源码现收录于 [训练冻结](../archive/training/candidate_c/README.md)。本次纯校验代码的运行结果见[验证记录](validation_20261024.md)。

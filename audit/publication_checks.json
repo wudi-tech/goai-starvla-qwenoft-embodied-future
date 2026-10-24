@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "scope": "local archive validation; no GPU training or simulation rerun",
+  "source_manifest_files_verified": 76,
+  "full_evaluation_summaries": {
+    "100k": {
+      "tasks": 24,
+      "episodes": 600,
+      "successes": 33
+    },
+    "20k": {
+      "tasks": 24,
+      "episodes": 600,
+      "successes": 28
+    }
+  },
+  "baseline_raw_result_files": 24,
+  "baseline_raw_successes": 33,
+  "diagnostic_episodes": 29,
+  "diagnostic_video_index_rows": 87,
+  "candidate_screening_rows": 9,
+  "candidate_screening_episodes": 45,
+  "python_files_parsed": 14,
+  "bash_files_syntax_checked": 5,
+  "relative_document_links_checked": 99,
+  "copied_training_diff_applies_to_vendored_tree": true,
+  "publication_scan": "no hard matches in selected new/changed files",
+  "paired_archived_unit_tests": {
+    "passed": 22,
+    "scope": "15 base guardrails plus 7 keepalive-audit tests"
+  },
+  "initial_full_extracted_test_run": {
+    "passed": 22,
+    "failed": 20,
+    "cause": "shard tests refer to functions absent in both archived eval_guardrails implementations",
+    "preservation": "archive/robodojo/unmatched_tests/test_eval_guardrails_shards.py.snapshot"
+  },
+  "limitations": [
+    "20k raw per-episode results not fully available",
+    "full StarVLA test suite not run",
+    "GPU experiments not rerun",
+    "official competition receipt/results not verified"
+  ]
+}

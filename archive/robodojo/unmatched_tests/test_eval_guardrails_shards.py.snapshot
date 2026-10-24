@@ -1,0 +1,200 @@
+"""Four-GPU shard-plan guardrails for the 600-episode formal re-run.
+
+Tests the pure shard-plan / manifest / identifier validation added to
+``eval_guardrails`` for the 4x RTX 5090 execution. No GPU or Isaac Sim is
+launched. These are pure, side-effect-free functions.
+"""
+
+from __future__ import annotations
+
+import json
+from pathlib import Path
+import sys
+
+import pytest
+
+INTERNAL_DIR = Path(__file__).resolve().parents[1]
+if str(INTERNAL_DIR) not in sys.path:
+    sys.path.insert(0, str(INTERNAL_DIR))
+
+import eval_guardrails as eg  # noqa: E402
+
+
+# ---------------------------------------------------------------------------
+# build_shard_plan
+# ---------------------------------------------------------------------------
+
+def test_build_shard_plan_has_4_shards():
+    shards = eg.build_shard_plan()
+    assert len(shards) == eg.SHARD_COUNT == 4
+
+
+def test_build_shard_plan_each_shard_6_configs_150_episodes():
+    shards = eg.build_shard_plan()
+    for s in shards:
+        assert len(s["configs"]) == eg.CONFIGS_PER_SHARD == 6
+        assert s["episodes"] == eg.EPISODES_PER_SHARD == 150
+
+
+def test_build_shard_plan_union_is_exactly_24_no_dups():
+    shards = eg.build_shard_plan()
+    configs = [c for s in shards for c in s["configs"]]
+    assert len(configs) == 24
+    assert len(set(configs)) == 24
+    assert set(configs) == eg.expected_task_set()
+
+
+def test_build_shard_plan_never_splits_base_random_pair():
+    shards = eg.build_shard_plan()
+    for s in shards:
+        for c in s["configs"]:
+            if not c.endswith("_random"):
+                assert f"{c}_random" in s["configs"], f"{c} split across shards"
+
+
+def test_build_shard_plan_deterministic():
+    assert eg.build_shard_plan() == eg.build_shard_plan()
+
+
+# ---------------------------------------------------------------------------
+# validate_shard_plan
+# ---------------------------------------------------------------------------
+
+def _valid_shards():
+    return eg.build_shard_plan()
+
+
+def test_validate_shard_plan_accepts_valid():
+    assert eg.validate_shard_plan(_valid_shards()) == []
+
+
+def test_validate_shard_plan_rejects_split_pair():
+    shards = _valid_shards()
+    base = next(c for c in shards[0]["configs"] if not c.endswith("_random"))
+    rand = f"{base}_random"
+    shards[0]["configs"].remove(rand)
+    shards[1]["configs"].append(rand)
+    shards[0]["episodes"] = len(shards[0]["configs"]) * 25
+    shards[1]["episodes"] = len(shards[1]["configs"]) * 25
+    errors = eg.validate_shard_plan(shards)
+    assert any("_random" in e or "split" in e for e in errors)
+
+
+def test_validate_shard_plan_rejects_duplicate_across_shards():
+    shards = _valid_shards()
+    dup = shards[0]["configs"][0]
+    shards[3]["configs"][0] = dup
+    errors = eg.validate_shard_plan(shards)
+    assert any("duplicate" in e for e in errors)
+
+
+def test_validate_shard_plan_rejects_5_config_shard():
+    shards = _valid_shards()
+    shards[0]["configs"] = shards[0]["configs"][:5]
+    shards[0]["episodes"] = 5 * 25
+    errors = eg.validate_shard_plan(shards)
+    assert any("5 configs" in e for e in errors)
+
+
+def test_validate_shard_plan_rejects_missing_task():
+    shards = _valid_shards()
+    shards[0]["configs"] = shards[0]["configs"][1:]
+    shards[0]["episodes"] = 5 * 25
+    errors = eg.validate_shard_plan(shards)
+    assert any("missing task" in e for e in errors)
+
+
+def test_validate_shard_plan_rejects_wrong_shard_count():
+    assert any("3 shards" in e for e in eg.validate_shard_plan(_valid_shards()[:3]))
+
+
+# ---------------------------------------------------------------------------
+# shard_identifiers / validate_shard_identifiers
+# ---------------------------------------------------------------------------
+
+def test_shard_identifiers_unique_and_namespaced():
+    rid = "2026-08-13-qwenoft-formal600-4x5090"
+    idents = eg.shard_identifiers(rid)
+    assert len(idents) == 4
+    run_ids = [i["run_id"] for i in idents]
+    screens = [i["screen"] for i in idents]
+    logs = [i["log_file"] for i in idents]
+    exits = [i["exit_file"] for i in idents]
+    assert len(set(run_ids)) == 4
+    assert len(set(screens)) == 4
+    assert len(set(logs)) == 4
+    assert len(set(exits)) == 4
+    for r in run_ids:
+        assert r.startswith(rid + "-shard")
+    assert eg.validate_shard_identifiers(idents, rid) == []
+
+
+def test_validate_shard_identifiers_rejects_parent_run_id_collision():
+    rid = "2026-08-13-qwenoft-formal600-4x5090"
+    idents = eg.shard_identifiers(rid)
+    idents[0]["run_id"] = rid
+    errors = eg.validate_shard_identifiers(idents, rid)
+    assert any("run_id" in e for e in errors)
+
+
+def test_validate_shard_identifiers_rejects_duplicate_screen():
+    rid = "2026-08-13-qwenoft-formal600-4x5090"
+    idents = eg.shard_identifiers(rid)
+    idents[1]["screen"] = idents[0]["screen"]
+    errors = eg.validate_shard_identifiers(idents, rid)
+    assert any("duplicate screen" in e for e in errors)
+
+
+# ---------------------------------------------------------------------------
+# build_manifest / validate_manifest
+# ---------------------------------------------------------------------------
+
+def test_build_manifest_valid():
+    m = eg.build_manifest("2026-08-13-qwenoft-formal600-4x5090")
+    assert m["run_id"] == "2026-08-13-qwenoft-formal600-4x5090"
+    assert m["eval_num"] == 25
+    assert m["num_gpus"] == 4
+    assert m["total_tasks"] == 24
+    assert m["total_episodes"] == 600
+    assert eg.validate_manifest(m) == []
+
+
+def test_validate_manifest_rejects_eval_num_26():
+    m = eg.build_manifest("2026-08-13-qwenoft-formal600-4x5090")
+    m["eval_num"] = 26
+    errors = eg.validate_manifest(m)
+    assert any("eval_num" in e for e in errors)
+
+
+def test_validate_manifest_rejects_gpu_mapping_gap():
+    m = eg.build_manifest("2026-08-13-qwenoft-formal600-4x5090")
+    for s in m["shards"]:
+        if s["gpu"] == 3:
+            s["gpu"] = 0
+    errors = eg.validate_manifest(m)
+    assert any("gpu" in e.lower() for e in errors)
+
+
+def test_manifest_roundtrip_json(tmp_path):
+    m = eg.build_manifest("2026-08-13-qwenoft-formal600-4x5090")
+    p = tmp_path / "manifest.json"
+    p.write_text(json.dumps(m), encoding="utf-8")
+    loaded = json.loads(p.read_text(encoding="utf-8"))
+    assert eg.validate_manifest(loaded) == []
+
+
+# ---------------------------------------------------------------------------
+# check_run_id_fresh
+# ---------------------------------------------------------------------------
+
+def test_check_run_id_fresh_clean(tmp_path):
+    ok, _ = eg.check_run_id_fresh("2026-08-13-qwenoft-formal600-4x5090", tmp_path)
+    assert ok
+
+
+def test_check_run_id_fresh_detects_existing(tmp_path):
+    rid = "2026-08-13-qwenoft-formal600-4x5090"
+    (tmp_path / f"{rid}-shard0.json").write_text("{}")
+    ok, msg = eg.check_run_id_fresh(rid, tmp_path)
+    assert not ok
+    assert "already exist" in msg

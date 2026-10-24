@@ -1,0 +1,253 @@
+{
+  "checkpoint": "steps_20000_pytorch_model",
+  "official_revision": "abf44de4b10b5c7efdc68f07630157329dbbcb7f",
+  "tasks": 24,
+  "total_successes": 28,
+  "total_episodes": 600,
+  "total_score": 164.8,
+  "overall_success_rate": 0.046667,
+  "problems": [],
+  "log_sha256": "fa40fbd1ba14aea6bf24f516e8db8d853e9d7fca1e214f941c0169f0653051f9",
+  "per_task": [
+    {
+      "task": "hang_mugs",
+      "run_dir": "2026-08-17_08-39-21",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 6.199999999999999,
+      "video_ok": true
+    },
+    {
+      "task": "fold_clothes",
+      "run_dir": "2026-08-17_10-08-32",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.24,
+      "successes": 6,
+      "score": 28.000000000000004,
+      "video_ok": true
+    },
+    {
+      "task": "arrange_largest_number",
+      "run_dir": "2026-08-17_10-59-19",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.4,
+      "video_ok": true
+    },
+    {
+      "task": "sort_nesting_dolls_by_size",
+      "run_dir": "2026-08-17_12-51-46",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_blocks",
+      "run_dir": "2026-08-17_14-45-04",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.08,
+      "successes": 2,
+      "score": 15.799999999999997,
+      "video_ok": true
+    },
+    {
+      "task": "make_toast",
+      "run_dir": "2026-08-17_15-42-57",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 6.0,
+      "video_ok": true
+    },
+    {
+      "task": "pack_objects_into_box",
+      "run_dir": "2026-08-17_18-43-14",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 2.9999999999999996,
+      "video_ok": true
+    },
+    {
+      "task": "pour_liquid_into_cup",
+      "run_dir": "2026-08-17_21-04-30",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.44,
+      "successes": 11,
+      "score": 44.0,
+      "video_ok": true
+    },
+    {
+      "task": "push_T",
+      "run_dir": "2026-08-17_21-55-32",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_bowls",
+      "run_dir": "2026-08-17_22-55-03",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.24,
+      "successes": 6,
+      "score": 28.800000000000004,
+      "video_ok": true
+    },
+    {
+      "task": "store_laptop_and_headphones",
+      "run_dir": "2026-08-18_00-17-24",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 13.600000000000001,
+      "video_ok": true
+    },
+    {
+      "task": "sweep_blocks",
+      "run_dir": "2026-08-18_01-53-26",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "hang_mugs_random",
+      "run_dir": "2026-08-18_03-44-15",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.6,
+      "video_ok": true
+    },
+    {
+      "task": "fold_clothes_random",
+      "run_dir": "2026-08-18_05-17-30",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.12,
+      "successes": 3,
+      "score": 12.0,
+      "video_ok": true
+    },
+    {
+      "task": "arrange_largest_number_random",
+      "run_dir": "2026-08-18_06-14-16",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.4,
+      "video_ok": true
+    },
+    {
+      "task": "sort_nesting_dolls_by_size_random",
+      "run_dir": "2026-08-18_08-18-07",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_blocks_random",
+      "run_dir": "2026-08-18_19-17-50",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.6,
+      "video_ok": true
+    },
+    {
+      "task": "make_toast_random",
+      "run_dir": "2026-08-18_20-24-28",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "pack_objects_into_box_random",
+      "run_dir": "2026-08-18_23-22-13",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "pour_liquid_into_cup_random",
+      "run_dir": "2026-08-18_12-11-47",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "push_T_random",
+      "run_dir": "2026-08-18_13-11-57",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    },
+    {
+      "task": "stack_bowls_random",
+      "run_dir": "2026-08-18_14-17-01",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.6,
+      "video_ok": true
+    },
+    {
+      "task": "store_laptop_and_headphones_random",
+      "run_dir": "2026-08-18_15-52-14",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 4.8,
+      "video_ok": true
+    },
+    {
+      "task": "sweep_blocks_random",
+      "run_dir": "2026-08-18_17-26-30",
+      "eval_time": 25,
+      "mp4": 75,
+      "success_rate": 0.0,
+      "successes": 0,
+      "score": 0.0,
+      "video_ok": true
+    }
+  ]
+}

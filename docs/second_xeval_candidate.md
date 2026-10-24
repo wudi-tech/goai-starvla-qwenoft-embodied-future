@@ -10,4 +10,4 @@
 - normalization：arx_x5
 - batch：WebSocket，`eval_batch=true`，`num_envs=5`
 
-Candidate C 官方结果尚未产生。本仓库不发布未经官方验证的成功率或优越性结论，也不包含 checkpoint、邮件内容或个人信息。
+截至 2026-10-24 的本地盘点未找到可确认的 Candidate C 官方成绩回执，不能据此断言主办方实时状态。本仓库不将本地工程筛选宣传为官方成绩或性能优越性结论，也不包含 checkpoint、邮件内容或个人信息。

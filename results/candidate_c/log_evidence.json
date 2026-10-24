@@ -1,0 +1,174 @@
+[
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_100000_fold_clothes_random_seed0_eval5.log",
+    "source_sha256": "f1060756598369195c94824f6e7e7f8f5b3574481cb3cc1dd2e35f6d51b805d6",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:59317 (PID=259477)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:59317",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_100000_stack_bowls_seed0_eval5.log",
+    "source_sha256": "8f8681217cb789e56c606ac695f435e8285b94e02c5ba66a227bfff732b0ba58",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:55643 (PID=254047)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:55643",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_60000_fold_clothes_random_seed0_eval5.log",
+    "source_sha256": "89f662f20e36c2648d882985699846f550db555ed255f9bec3bec3cea646bac9",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:41183 (PID=237448)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:41183",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_60000_stack_bowls_seed0_eval5.log",
+    "source_sha256": "b79de60c63af4243932bad12d240231df2c80bd580fdba07d426b34c0fbe4c09",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:49459 (PID=225762)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:49459",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_80000_fold_clothes_random_seed0_eval5.log",
+    "source_sha256": "ece742163005ff998b82a1612f8963b6866f6aad51dcdcb448047d529041cb4d",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:57789 (PID=248649)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:57789",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/candidate_c_80000_stack_bowls_seed0_eval5.log",
+    "source_sha256": "6a3bc79de50070a3c2efe38f75533ccbc1978fc1dffc9428510b2fc763586bfd",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:45423 (PID=243195)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:45423",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/quick_screen_summary_v3.log",
+    "source_sha256": "de5d7f1f665638ae3c36a6bf58bd8e9afd0f40b12c5e25cc7206f21b2c680765",
+    "lines": [
+      "[2026-08-20 14:44:50 CST] RUN_DONE step=80000 task=stack_bowls rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_80000_stack_bowls_seed0_eval5.log",
+      "[2026-08-20 14:58:06 CST] RUN_DONE step=80000 task=fold_clothes_random rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_80000_fold_clothes_random_seed0_eval5.log",
+      "[2026-08-20 15:12:22 CST] RUN_DONE step=100000 task=stack_bowls rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_100000_stack_bowls_seed0_eval5.log",
+      "[2026-08-20 15:23:27 CST] RUN_DONE step=100000 task=fold_clothes_random rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_100000_fold_clothes_random_seed0_eval5.log",
+      "[2026-08-20 15:23:27 CST] QUICK_SCREEN_V3_DONE"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/quick_screen_v3_final/quick_screen_v3_driver.log",
+    "source_sha256": "e557e190706eecfd65a35f1b069dd43b2d6eed9b302b9d42e8bda21213d6228f",
+    "lines": [
+      "[2026-08-20 14:44:50 CST] RUN_DONE step=80000 task=stack_bowls rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_80000_stack_bowls_seed0_eval5.log",
+      "[2026-08-20 14:58:06 CST] RUN_DONE step=80000 task=fold_clothes_random rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_80000_fold_clothes_random_seed0_eval5.log",
+      "[2026-08-20 15:12:22 CST] RUN_DONE step=100000 task=stack_bowls rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_100000_stack_bowls_seed0_eval5.log",
+      "[2026-08-20 15:23:27 CST] RUN_DONE step=100000 task=fold_clothes_random rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/quick_screen_v3/candidate_c_100000_fold_clothes_random_seed0_eval5.log",
+      "[2026-08-20 15:23:27 CST] QUICK_SCREEN_V3_DONE"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/candidate_c_100000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+    "source_sha256": "29b71510680208924eec1669f2e15c5cd786d00653ea23a1a4510e18140746d5",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:53945 (PID=276585)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:53945",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/candidate_c_60000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+    "source_sha256": "c28052553c2c551bb15246345f75d099ed1441521f49299e65052664f40eb6ac",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:40209 (PID=265902)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:40209",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/candidate_c_80000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+    "source_sha256": "3178d2de5ddb0dbddee9e836a34d52cac779a5c79dce9d27e2ee7c2e875972c6",
+    "lines": [
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m Policy server ready on localhost:45609 (PID=271265)",
+      "\u001b[34m[CLIENT] Watch for green [CONNECTED]; yellow [RECONNECT] means the client is retrying.\u001b[0m",
+      "[INFO] eval_batch     = true",
+      "[INFO] num_envs        = 5",
+      "\u001b[32m\u001b[1m[CONNECTED]\u001b[0m websocket policy server connected: ws://localhost:45609",
+      "Success nums: 0, Fail nums: 5, Unstable nums: 0",
+      "[MAIN] eval finished"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/tiebreak_pour_driver.log",
+    "source_sha256": "d72df7a55e7ea70cc9b99b152989cee02255dc4b78bdfc182174332b6d86274e",
+    "lines": [
+      "[2026-08-20 16:13:39 CST] RUN_DONE step=60000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_60000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:24:02 CST] RUN_DONE step=80000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_80000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:34:09 CST] RUN_DONE step=100000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_100000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:34:09 CST] TIEBREAK_DONE"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  },
+  {
+    "source_path": "第二次提交_20260820/05_validation_and_reports/raw_smoke_screen_logs/tiebreak_pour_v1_final/tiebreak_pour_summary.log",
+    "source_sha256": "4141faf5212d63100007cd4ffcb42cf958a58e89bc1d546cd7bd28e129f6f6d2",
+    "lines": [
+      "[2026-08-20 16:13:39 CST] RUN_DONE step=60000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_60000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:24:02 CST] RUN_DONE step=80000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_80000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:34:09 CST] RUN_DONE step=100000 task=pour_liquid_into_cup rc=0 status=VALID success=Success\\ nums:\\ 0\\,\\ Fail\\ nums:\\ 5\\,\\ Unstable\\ nums:\\ 0 error='' log=/root/autodl-tmp/GOAI/candidate_c/finalization_20260820/tiebreak_pour_v1/candidate_c_100000_pour_liquid_into_cup_seed0_eval5_tiebreak.log",
+      "[2026-08-20 16:34:09 CST] TIEBREAK_DONE"
+    ],
+    "scope": "selected log lines; full logs retained locally"
+  }
+]

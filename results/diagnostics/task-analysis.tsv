@@ -1,0 +1,25 @@
+task	success_rate	sampled_failure_episode	primary_failure_mode	stage	evidence	confidence
+arrange_largest_number	0.00	0	sequencing	multi_object_ordering	Digits are contacted and displaced, but the final state does not place the full sequence onto the target disks.	medium
+arrange_largest_number_random	0.00	0	perception_localization	action_initiation	The cluttered randomized scene shows arm motion but almost no useful digit placement or target-state change.	medium
+fold_clothes	0.24	1	motion_control	deformable_alignment	The shirt is grasped and folded, but finishes bunched and misaligned rather than in the compact accepted configuration seen in the success sample.	high
+fold_clothes_random	0.08	0	motion_control	deformable_alignment	The garment is manipulated substantially, but the final fold is asymmetric/incomplete; the success sample finishes more compactly aligned.	high
+make_toast	0.00	0	grasp_contact	precision_placement	Bread reaches the toaster area but rests against/on the opening instead of being inserted into the slots.	high
+push_T	0.00	0	grasp_contact	object_engagement	The T object remains essentially unchanged while the gripper approaches without producing a sustained task-directed push.	medium
+push_T_random	0.00	0	perception_localization	action_initiation	The randomized T remains in its initial region with no meaningful task-directed displacement.	medium
+sort_nesting_dolls_by_size	0.00	0	sequencing	ordered_assembly	Doll parts are contacted and separated, but the episode ends with pieces still un-nested and out of size order.	high
+sort_nesting_dolls_by_size_random	0.00	0	sequencing	ordered_assembly	One or more dolls are manipulated, but randomized objects remain unassembled; ordering/assembly does not converge.	high
+stack_bowls	0.36	0	motion_control	precision_placement	The arm reaches a bowl, yet bowls remain separate at termination; the success sample shows a completed bowl-on-bowl placement.	high
+stack_bowls_random	0.00	0	perception_localization	precision_placement	The randomized scene receives arm motion but no stable bowl nesting/stacking; bowls remain separated.	medium
+store_laptop_and_headphones	0.00	0	sequencing	multi_object_storage	Laptop/headphones are moved, but both required objects are not stably stored in the target organizer by termination.	medium
+store_laptop_and_headphones_random	0.00	0	sequencing	multi_object_storage	The policy interacts with the cluttered workspace but does not complete the two-object storage sequence.	medium
+pack_objects_into_box	0.00	0	grasp_contact	container_placement	A shoe/object is handled near the box, but the box is disturbed and required objects remain outside rather than stably contained.	high
+hang_mugs	0.00	0	motion_control	hook_alignment	A mug is brought to the rack, but its handle is not securely aligned/seated on a peg at termination.	high
+pack_objects_into_box_random	0.00	0	perception_localization	action_initiation	The randomized objects and box show little useful state change; the packing sequence never establishes a stable first placement.	medium
+pour_liquid_into_cup	0.40	0	motion_control	pour_angle_timing	The bottle is grasped and brought over the cup, but the tilt/position sequence does not satisfy the pour criterion; the success sample maintains a clearer pour pose.	high
+stack_blocks	0.24	1	motion_control	precision_placement	A block is grasped/moved, but the final configuration is not a stable stack; the success sample completes a centered placement.	high
+sweep_blocks	0.00	0	sequencing	bimanual_tool_coordination	Brush/dustpan and blocks are engaged, but objects remain dispersed and are not collected into the target tool/region.	medium
+hang_mugs_random	0.00	0	motion_control	hook_alignment	The randomized mug is contacted near the rack but is not stably hung; pose generalization and handle-to-peg alignment fail.	medium
+pour_liquid_into_cup_random	0.00	0	perception_localization	action_initiation	The randomized scene remains nearly unchanged and the policy does not establish a bottle grasp followed by a pour trajectory.	medium
+stack_blocks_random	0.00	0	motion_control	precision_placement	The arm reaches among randomized objects, but blocks remain unstacked; placement does not converge under clutter/layout shift.	medium
+sweep_blocks_random	0.00	0	sequencing	bimanual_tool_coordination	The tools move around the blocks, but the randomized objects remain dispersed; coordinated sweep/collection is incomplete.	medium
+make_toast_random	0.00	0	perception_localization	action_initiation	The randomized toast and toaster arrangement shows no completed grasp-to-slot trajectory and the scene is essentially unchanged.	medium

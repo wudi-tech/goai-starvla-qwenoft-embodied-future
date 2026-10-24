@@ -1,43 +1,53 @@
-# StarVLA-QwenOFT：统一双臂协同操作系统
+# GOAI 具身未来：双臂视觉语言动作模型的训练、部署与评测
 
-GOAI“具身未来”赛题一（通用双臂协作操作能力测试）的项目主页与复现索引。本分支明确区分第一次提交的稳定基线和第二次 X-Eval 申请的 Candidate C 100k。
+面向 GOAI 2026「通用双臂协作操作能力测试」的个人竞赛项目。基于开源 StarVLA-QwenOFT、XPolicyLab、RoboDojo 和 Isaac Sim，完成模型训练配置、策略服务部署、多环境闭环仿真评测及失败分析。
 
-模型输入为头部、左腕、右腕三路相机、语言指令和 14D 机器人状态；输出为 14D `joint` 动作序列。
+项目实施时间：**2026.07—2026.08**；本次资料整理：**2026-10-24**。本仓库保存可公开复查的代码、实验结果和历史资料，不包含模型权重、训练数据或完整仿真资产。
 
-## 双版本身份
+## 项目进行到了哪里
 
-| 项 | 稳定基线 | Candidate C 100k |
-|---|---|---|
-| 角色 | 第一次提交参考版本 | 第二次 X-Eval 唯一候选 |
-| checkpoint | `steps_100000_pytorch_model.pt` | `steps_100000_pytorch_model.pt` |
-| 字节数 | 9,785,133,528 | 9,138,620,878 |
-| SHA256 | `62b8333c9af58467a911150e908cc726dd3c2660fd461871ae9300296391a3cd` | `f9653c98f9124065672a659775abe7249f155db96fdeffc288b84ce9a2a87042` |
-| 本地评测 | 600 回合工程评测 33/600、5.50%、score 191.6 | 未运行 600 回合评测 |
-| 官方状态 | 本地数字不是 X-Eval 官方成绩 | 第二次 X-Eval 结果待返回 |
+**当前阶段：竞赛原型已完成训练部署和本地实验验证，进入结果分析与归档阶段。** 现有证据没有证明多任务泛化目标已经实现，也没有可确认的 X-Eval 官方成绩回执。
 
-Candidate C 的 60k/80k/100k 小样本筛选仅用于内部选型，三版无法区分；选择 100k 是因为它是完整训练终点，不是性能优越性声明。
+| 版本 | 已完成工作 | 本地结果 | 应如何理解 |
+|---|---|---|---|
+| 早期单任务 ACT | raw-HDF5 数据链路、训练与闭环对照 | weighted / latest 各 0/5 | 工程探索；当前归档缺少完整 ACT 源码 |
+| 公开 QwenOFT 100k 稳定基线 | 24 项配置 × 25 回合 | **33/600，5.50%** | 公开模型的本地复评，不是本项目从零训练或官方成绩 |
+| 定向微调 20k | 890 条轨迹上的动作头微调与完整复评 | **28/600，4.67%** | 总体观测值低于基线，不能宣传为性能提升 |
+| Candidate C 100k | 35 任务数据上的后续训练、60k/80k/100k 筛选、版本冻结 | 各检查点 **0/15**；未完成完整 600 回合评测 | 小样本内部筛选，不能与上述完整评测直接排名 |
+
+两版完整评测合计 **1,200 回合**，不包含筛选、冒烟及补跑的其他回合。诊断资料覆盖 **29 个代表回合、87 段三相机视频索引**；这里只发布索引和结果，不发布视频本体。数字均来自本地仿真。
+
+## 从哪里开始阅读
+
+1. [项目状态与未解决问题](docs/project_status.md)：已完成、未验证、资料缺口。
+2. [实验演进](docs/experiment_history.md)：从 ACT 到统一 QwenOFT，再到两轮微调。
+3. [系统结构与 WebSocket 联调](docs/system_architecture.md)：观测、动作、服务和多环境执行。
+4. [个人工作与开源复用边界](docs/contributions.md)：能讲清楚的贡献和对应源码。
+5. [评测结果](results/README.md)：两版完整评测、原始基线结果和候选筛选。
+6. [复现与本地验证](docs/reproduction.md)：所需资产、历史环境、可运行的轻量检查。
+7. [完整资料索引](docs/materials_index.md)：历史报告、配置、源码及保留策略。
+
+## 有价值的代码
+
+| 目录 | 用途 |
+|---|---|
+| [xpolicylab/](xpolicylab/) | 已有 XPolicyLab/StarVLA 适配层、模型服务、WebSocket 通信及启动工具 |
+| [评测护栏与原有测试](archive/robodojo/scripts/internal/) | 检查任务清单、回合数和三相机视频，避免无效结果混入统计；分片测试存在版本缺口 |
+| [WebSocket 恢复审计](xpolicylab/scripts/internal/audit_keepalive.py) | 区分已恢复的 keepalive 超时与未完成的任务 |
+| [Candidate C 训练差异及源码快照](archive/training/candidate_c/) | embodiment 配置、训练初始化及保存里程碑等实际变更 |
+| [历史实验脚本](scripts/historical/) | 数据子集、训练配置派生、NCCL 自检、评测与快筛；有环境路径和运行副作用，使用前阅读说明 |
 
 ## 固定接口
 
-- action type：`joint`
-- state/action：14D / 14D
-- cameras：`head`、`left_wrist`、`right_wrist`
-- action horizon / execute horizon：50 / 16
-- normalization：`arx_x5`
-- batch inference：`eval_batch=true`，验证 `num_envs=5`
+- 观测：头部、左腕、右腕三路图像 + 语言指令 + 14D 机器人状态。
+- 动作：14D `joint`，顺序为左臂 6 + 左夹爪 1 + 右臂 6 + 右夹爪 1。
+- 动作预测长度 / 每次执行长度：**50 / 16**。
+- 通信：WebSocket；部署已启用 `eval_batch=true`，历史日志验证 `num_envs=5`。
+- 5 环境批量评测不等于模型获得 5 倍提速；当前适配代码仍包含逐环境推理调用。
+- 稳定基线和 Candidate C 使用 `arx_x5` 归一化键；历史 20k 版本使用其自身的 `new_embodiment` 统计，不可混用。
 
-## 复现材料
+## 可复查性与许可证
 
-- `xpolicylab/`：实际使用的 StarVLA 适配层、模型服务、WebSocket 通信与环境启动工具；
-- `configs/inference_config.yaml`：Candidate C 100k 固定推理接口；
-- `configs/inference_config_stable_baseline.yaml`：稳定基线身份；
-- `docs/code_freeze.md`：代码版本与实际运行差异；
-- `docs/evaluation_boundary.md`：本地结果和 X-Eval 官方结果的边界；
-- `docs/reproduction.md`：离线评测运行要点；
-- `docs/second_xeval_candidate.md`：第二次候选的完整身份。
+[来源清单](audit/source_manifest.json)记录收录文件的原始路径、原始 SHA256、公开副本 SHA256 和处理方式；[归档校验清单](audit/curated.sha256)用于核对本次整理的文件。公开的基线逐回合结果可以独立重算；20k 版本目前只收录逐任务汇总，完整原始回合与视频没有全部归档至此。
 
-本公开仓库不包含 checkpoint、RoboDojo 数据、Isaac Sim 资产、缓存、评测视频、邮件草稿或个人信息。
-
-## 开源与第三方说明
-
-本仓库仅公开本项目的配置、复现索引和说明。StarVLA、Qwen、RoboDojo、XPolicyLab、Isaac Sim 及其依赖分别受各自的许可证与条款约束；请参见 [NOTICE.md](NOTICE.md)。
+StarVLA、XPolicyLab 和 RoboDojo 的代码及适配内容分别保留原有许可证与作者信息。个人工作集中于项目配置、集成、实验组织、运行修复和分析；不将开源模型与通信框架归为原创。详见 [NOTICE](NOTICE.md)。

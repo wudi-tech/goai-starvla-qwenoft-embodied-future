@@ -1,0 +1,13 @@
+diff --git a/policy/starVLA/deploy.yml b/policy/starVLA/deploy.yml
+index 16ce2e4..eef31f9 100644
+--- a/policy/starVLA/deploy.yml
++++ b/policy/starVLA/deploy.yml
+@@ -6,7 +6,7 @@ env_cfg_type: null
+ action_type: joint
+ gpu_id: null
+ seed: null
+-eval_batch: false
++eval_batch: true
+ 
+ # XPolicyLab model server
+ host: localhost
